@@ -5,6 +5,9 @@
   "main": "server.js",
   "repository": "",
   "author": "Jason Giambi",
+  "engines": {
+    "node": "4.1.1"
+    },
   "dependencies": {
     "async": "~0.2.8",
     "body-parser": "^1.15.0",
