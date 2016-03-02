@@ -1,7 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-// var m = require('./model.js');
 var mongoose = require("mongoose");
 
 mongoose.connect('mongodb://master:Ibookg41234@ds019068.mlab.com:19068/ssl');
@@ -31,7 +30,7 @@ app.post('/process', function(req, res) {
    var o = {};
    o.map = function () { emit(this.share, this.count) }
    o.reduce = function (key, vals) { return Array.sum( vals ) }
-  o.query = { page: req.body.input }
+   o.query = { page: req.body.input }
    pgShare.mapReduce(o, function (err, results) {
        if (err) console.error(err);
        res.json(results.sort(function (a, b) {

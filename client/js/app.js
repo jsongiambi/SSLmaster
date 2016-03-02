@@ -25,13 +25,14 @@ $(function() {
         }
     });
     
-    $('#list2').on('click', function () {
-        if ($('#list1').attr('class')) {
-            $('#list1').removeAttr('class');
-        }
-        if (!$(this).attr('class')) {
-            $(this).attr('class', 'active');
-        }
+    $('#list2').on('click', function (e) {
+        e.preventDefault();
+        // if ($('#list1').attr('class')) {
+        //     $('#list1').removeAttr('class');
+        // }
+        // if (!$(this).attr('class')) {
+        //     $(this).attr('class', 'active');
+        // }
     });
     
     $('#btn1').on('click', function() {
